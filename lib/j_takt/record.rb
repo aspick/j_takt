@@ -4,7 +4,7 @@ module JTakt
   # represent single csv row
   class Record
     attr :interface_keycode, :content_segment, :content_number, :medley_segment, :medley_number,
-         :collect_code, :jasrac_code, :title, :sub_title, :lyricist, :supplement_lyricist,
+         :correct_code, :jasrac_code, :title, :sub_title, :lyricist, :supplement_lyricist,
          :composer, :arranger, :artist, :information_fee, :itv_segment,
          :original_text_or_translated, :il_segment, :request_count
 
@@ -14,7 +14,7 @@ module JTakt
     # @param medley_segment [MedleySegment]
     # @param medley_number [Integer]
     # @param jasrac_code [String]
-    # @param collect_code [String]
+    # @param correct_code [String]
     # @param title [String]
     # @param sub_title [String]
     # @param lyricist [String]
@@ -34,7 +34,7 @@ module JTakt
       medley_segment: MedleySegment::NOT_MEDLEY,
       medley_number: 0,
       jasrac_code:,
-      collect_code: nil,
+      correct_code: nil,
       title:, 
       sub_title: nil,
       lyricist: nil,
@@ -53,7 +53,7 @@ module JTakt
       @content_number = Number.new(content_number)
       @medley_segment = medley_segment
       @medley_number = Number.new(medley_number)
-      @collect_code = collect_code
+      @correct_code = correct_code
       @jasrac_code = JasracCode.new(jasrac_code)
       @title = title
       @sub_title = sub_title
@@ -77,7 +77,7 @@ module JTakt
         @content_number,
         @medley_segment,
         @medley_number,
-        @collect_code,
+        @correct_code,
         @jasrac_code,
         @title,
         @sub_title,
