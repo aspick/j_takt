@@ -28,7 +28,7 @@ records = works.map do |work|
     jasrac_code: work.jasrac_code,
     title: work.title,
     composer: work.composer,
-    itv_segment: JTakt::Record::IvtSegment::MUSIC_ONLY,
+    ivt_segment: JTakt::Record::UsingContentType::MUSIC_ONLY,
     request_count: work.request_count
   )
 end

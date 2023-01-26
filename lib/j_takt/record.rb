@@ -5,7 +5,7 @@ module JTakt
   class Record
     attr :interface_keycode, :content_segment, :content_number, :medley_segment, :medley_number,
          :correct_code, :jasrac_code, :title, :sub_title, :lyricist, :supplement_lyricist,
-         :composer, :arranger, :artist, :information_fee, :itv_segment,
+         :composer, :arranger, :artist, :information_fee, :ivt_segment,
          :original_text_or_translated, :il_segment, :request_count
 
     # @param interface_keycode [String] unique id of content on your system
@@ -23,7 +23,7 @@ module JTakt
     # @param arranger [String]
     # @param artist [String]
     # @param information_fee [Float]
-    # @param itv_segment [UsingContentType]
+    # @param ivt_segment [UsingContentType]
     # @param original_text_or_translated [OriginalTextOrTranslated]
     # @param il_segment [UsingRecordingPublishedIn]
     # @param request_count [Integer]
