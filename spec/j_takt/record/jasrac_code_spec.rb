@@ -5,14 +5,14 @@ RSpec.describe JTakt::Record::JasracCode do
     subject { described_class.new(code) }
 
     context "when passed valid jasrac code" do
-      let(:code) { "1234-5678" }
+      let(:code) { "1234-567A" }
       it { is_expected.to be_a(described_class) }
     end
 
     context "when passed invalid jasrac code" do
       let(:code) { "1234=5678" }
       it do
-        expect { subject }.to raise_error "Invalid jasrac code: should only contain 0-9 and `-`"
+        expect { subject }.to raise_error "Invalid jasrac code: should only contain 0-9, A-Z and `-`"
       end
     end
   end

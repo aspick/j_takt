@@ -8,7 +8,7 @@ module JTakt
 
       # @param code [String] jasrac code
       def initialize(code)
-        raise "Invalid jasrac code: should only contain 0-9 and `-`" if /[^0-9\-]/.match(code)
+        raise "Invalid jasrac code: should only contain 0-9, A-Z and `-`" if /[^0-9A-Z\-]/.match(code)
 
         @code = code
       end
